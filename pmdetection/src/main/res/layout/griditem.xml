@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@mipmap/bg_circle"
+    android:baselineAligned="false">
+
+    <TextView
+        android:id="@+id/home_district"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/my_textView_detail"/>
+    <TextView
+        android:id="@+id/home_pollution_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/my_textView_detail"/>
+    <TextView
+        android:id="@+id/home_level_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/my_textView_detail"/>
+</LinearLayout>

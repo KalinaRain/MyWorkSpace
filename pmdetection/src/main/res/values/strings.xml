@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">身边的PM2.5</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="main_top_title">pm2.5-城市站点即时通</string>
+    <string name="main_top_city_name">北京</string>
+    <string name="chosen_top_title">选择城市</string>
+</resources>
