@@ -150,7 +150,6 @@ public class CityChosenActivity extends Activity {
     public static final int LEVEL_COUNTY = 2;
 
     private ProgressDialog progressDialog;
-    private TextView titleText;
     private ListView listView;
     private ArrayAdapter<String> adapter;
     private PM25DB pm25DB;
@@ -260,7 +259,6 @@ public class CityChosenActivity extends Activity {
             }
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
-            titleText.setText("中国");
             currentLevel = LEVEL_PROVINCE;
         } else {
             queryFromServer(null, "province");
@@ -279,7 +277,6 @@ public class CityChosenActivity extends Activity {
             }
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
-            titleText.setText(selectedProvince.getProvinceName());
             currentLevel = LEVEL_CITY;
         } else {
             queryFromServer(selectedProvince.getProvinceCode(), "city");
@@ -298,7 +295,7 @@ public class CityChosenActivity extends Activity {
             }
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
-            titleText.setText(selectedCity.getCityName());
+//            titleText.setText(selectedCity.getCityName());
             currentLevel = LEVEL_COUNTY;
         } else {
             queryFromServer(selectedCity.getCityCode(), "county");
@@ -321,14 +318,11 @@ public class CityChosenActivity extends Activity {
             public void onFinish(String response) {
                 boolean result = false;
                 if ("province".equals(type)) {
-                    result = Utility.handleProvincesResponse(pm25DB,
-                            response);
+                    result = Utility.handleProvincesResponse(pm25DB, response);
                 } else if ("city".equals(type)) {
-                    result = Utility.handleCitiesResponse(pm25DB,
-                            response, selectedProvince.getId());
+                    result = Utility.handleCitiesResponse(pm25DB, response, selectedProvince.getId());
                 } else if ("county".equals(type)) {
-                    result = Utility.handleCountiesResponse(pm25DB,
-                            response, selectedCity.getId());
+                    result = Utility.handleCountiesResponse(pm25DB, response, selectedCity.getId());
                 }
                 if (result) {
                     // 通过runOnUiThread()方法回到主线程处理逻辑

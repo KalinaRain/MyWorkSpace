@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyWorkSpace.iml" filepath="$PROJECT_DIR$/MyWorkSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytool/mytool.iml" filepath="$PROJECT_DIR$/mytool/mytool.iml" />
       <module fileurl="file://$PROJECT_DIR$/pmdetection/pmdetection.iml" filepath="$PROJECT_DIR$/pmdetection/pmdetection.iml" />
     </modules>
   </component>

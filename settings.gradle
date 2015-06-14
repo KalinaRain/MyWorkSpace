@@ -1,1 +1,1 @@
-include ':app', ':pmdetection'
+include ':app', ':pmdetection', ':mytool'
